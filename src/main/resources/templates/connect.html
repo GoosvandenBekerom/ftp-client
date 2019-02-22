@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="fragments/head :: head"></head>
+<body>
+<div th:replace="layout/nav :: navigation"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="mt-5" th:text="${connection.name ?: 'Connection ' + connection.id }"></h1>
+
+            <p>User: <span th:text="${connection.username}"></span></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
